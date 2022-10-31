@@ -99,6 +99,7 @@ public class DatePickerPlugin extends CordovaPlugin {
 						jsonDate.minutes, jsonDate.is24Hour) {
 					public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
 						timePicker = view;
+						timePicker.setDescendantFocusability(TimePicker.FOCUS_BLOCK_DESCENDANTS);
 						timePickerHour = hourOfDay;
 						timePickerMinute = minute;
 					}
